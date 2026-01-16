@@ -5,8 +5,14 @@ html,
 body {
   width: 100%;
   height: 100vh;
-  font-family: "League Spartan", sans-serif;
+  font-family: "Inter", sans-serif;
+  background-color: #f2f0f0;
 }
 
 @theme {
+  --color-dark: #111827;
+  --color-gray: #374151;
+  --color-light-grey: #4b5563;
+  --color-green: #16a34a;
+  --color-red: #dc2626;
 }
