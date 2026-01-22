@@ -15,4 +15,7 @@ body {
   --color-light-grey: #4b5563;
   --color-green: #16a34a;
   --color-red: #dc2626;
+  --color-light-green: #dcfce7;
+
+  --breakpoint-lg: 1080px;
 }
