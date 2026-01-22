@@ -51,7 +51,7 @@ const Registration: React.FC = () => {
               </h4>
               <input
                 className="w-full h-12 border border-[#D1D5DB] text-black text-[16px] rounded-lg px-4 py-3 placeholder:opacity-50"
-                type="email"
+                type="password"
                 placeholder="Password"
               />
             </div>
