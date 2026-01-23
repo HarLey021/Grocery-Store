@@ -3,13 +3,15 @@ const Recover: React.FC = () => {
     <>
       {/* this first line is temporrary and should be deleted while routing for correct design*/}
       <div className="w-full h-screen px-4 lg:flex lg:justify-center">
-        <div className="w-full h-108 bg-white rounded-xl p-8 flex flex-col items-center lg:w-md">
+        <div className="w-full bg-white rounded-xl p-8 flex flex-col items-center lg:w-md">
           <div className="w-16 h-16 bg-light-green rounded-4xl flex justify-center items-center mb-4">
             <img className="w-8 h-8" src="/lock.svg" alt="lock icon" />
           </div>
 
-          <h1 className="w-auto text-3xl font-normal mb-2">Recover Password</h1>
-          <h3 className="text-[13px] font-normal text-light-grey mb-8">
+          <h1 className="w-auto text-3xl font-normal text-center mb-2">
+            Recover Password
+          </h1>
+          <h3 className="text-[13px] font-normal text-light-grey mb-8 text-center">
             Enter your email to receive reset instructions
           </h3>
 
