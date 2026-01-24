@@ -1,5 +1,6 @@
 import Header from "./components/header/Header";
-import PersonalInfo from "./components/personalInfo/PersonalInfo";
+import Product from "./components/product/Product";
+// import PersonalInfo from "./components/personalInfo/PersonalInfo";
 // import Profile from "./components/profile/Profile";
 // import Recover from "./components/recover/Recover";
 // import Login from "./components/login/Login";
@@ -13,8 +14,9 @@ function App() {
         {/* <Registration />
         <Login />
         <Recover />
-        <Profile /> */}
-        <PersonalInfo />
+        <Profile />
+        <PersonalInfo /> */}
+        <Product />
       </div>
     </>
   );
