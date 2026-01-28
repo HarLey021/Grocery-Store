@@ -3,6 +3,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HeaderLayout from "./layouts/HeaderLayout";
 import Home from "./pages/Home";
+import Login from "./components/login/Login";
+import Registration from "./components/registration/Registration";
+import Recover from "./components/recover/Recover";
+import Profile from "./components/profile/Profile";
+import PersonalInfo from "./components/personalInfo/PersonalInfo";
 
 const router = createBrowserRouter([
   {
@@ -10,8 +15,32 @@ const router = createBrowserRouter([
     element: <HeaderLayout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />,
+      },
+      {
+        path: "home",
+        element: <Home />,
+      },
+      {
+        path: "registration",
+        element: <Registration />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "recover",
+        element: <Recover />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "personal-info",
+        element: <PersonalInfo />,
       },
     ],
   },
