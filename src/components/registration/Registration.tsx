@@ -1,8 +1,7 @@
 const Registration: React.FC = () => {
   return (
     <>
-      {/* this first line is temporrary and should be deleted while routing for correct design*/}
-      <div className="w-full h-screen px-4 lg:flex lg:justify-center">
+      <div className="w-full min-h-screen px-6 py-12 lg:flex lg:justify-center">
         <div className="w-full bg-white rounded-xl p-8 flex flex-col items-center lg:w-md lg:h-min">
           <h1 className="w-auto text-3xl font-normal mb-2">Create Account</h1>
           <h3 className="text-[13px] font-normal text-light-grey mb-8">

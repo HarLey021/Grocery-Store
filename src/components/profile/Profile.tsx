@@ -1,8 +1,9 @@
+import { Outlet } from "react-router-dom";
+
 const Profile: React.FC = () => {
   return (
     <>
-      {/* this first line is temporrary and should be deleted while routing for correct design*/}
-      <div className="w-full h-screen px-4 lg:flex lg:justify-center">
+      <div className="w-full min-h-screen px-6 py-12 lg:flex lg:justify-center">
         <div className="w-full bg-white rounded-xl p-8 flex flex-col items-center lg:w-md lg:h-min">
           <div className="w-24 h-24 bg-light-green rounded-[48px] flex justify-center items-center mb-4">
             <img className="w-12 h-12" src="person.svg" alt="person icon" />
@@ -21,7 +22,7 @@ const Profile: React.FC = () => {
                 alt="person icon"
               />
               <h4 className="text-[14px] text-grey font-normal">
-                Profile info
+                Personal info
               </h4>
             </button>
 
@@ -44,6 +45,7 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </div>
+      <Outlet />
     </>
   );
 };
