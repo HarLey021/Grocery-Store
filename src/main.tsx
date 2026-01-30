@@ -8,6 +8,7 @@ import Registration from "./components/registration/Registration";
 import Recover from "./components/recover/Recover";
 import Profile from "./components/profile/Profile";
 import PersonalInfo from "./components/personalInfo/PersonalInfo";
+import MainContextProvider from "./contexts/MainContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -47,5 +48,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />,
+  <MainContextProvider>
+    <RouterProvider router={router} />,
+  </MainContextProvider>,
 );
