@@ -14,7 +14,7 @@ const Header: React.FC = () => {
       <div>
         <div className="w-full h-16 bg-white flex justify-between items-center p-4">
           <div className="flex gap-2">
-            <img className="w-8 h-8" src="bostani-logo.jpg" alt="leaf icon" />
+            <img className="w-8 h-8" src="bostani-logo.jpg" alt="logo" />
             <h1 className="text-3xl h-8 -mt-0.75">Fresh Market</h1>
           </div>
 
