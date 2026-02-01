@@ -42,7 +42,33 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
-        <img className="w-full" src="baneri.jpg" alt="" />
+
+        <div className="w-full flex flex-col justify-center items-center bg-[#56bf41] px-2 py-2 [box-shadow:0_4px_10px_rgba(0,0,0,0.3)]">
+          <div className="lg:flex gap-8">
+            <img className="hidden lg:flex w-30 h-30" src="dairy.png" alt="" />
+            <div className="lg:flex flex-col items-center justify-center">
+              <h1 className="text-[26px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-5xl">
+                <span className="text-yellow-300">წალკის</span> რძის პროდუქტები
+              </h1>
+              <div className="flex items-center gap-2">
+                <img className="lg:hidden w-15 h-15" src="dairy.png" alt="" />
+                <h1 className="text-[26px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-5xl">
+                  ხილ-ბოსტნეული
+                </h1>
+                <img
+                  className="lg:hidden w-15 h-15"
+                  src="vegetables.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <img
+              className="hidden lg:flex w-30 h-30"
+              src="vegetables.png"
+              alt=""
+            />
+          </div>
+        </div>
         {toggleMenu ? <Menu /> : ""}
       </div>
     </>
