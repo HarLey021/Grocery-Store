@@ -12,28 +12,32 @@ const Header: React.FC = () => {
   return (
     <>
       <div>
-        <div className="w-full bg-white flex justify-between  items-center ">
-          <div className="w-14 h-14 flex justify-center items-center gap-2">
-            <img className="w-8 h-8" src="bostani-logo.jpg" alt="logo" />
+        <div className="w-full h-14 bg-white flex justify-between items-center lg:h-27">
+          <div className="w-14 h-full flex justify-center items-center gap-2 lg:w-29 ">
+            <img
+              className="w-8 h-8 lg:w-16 lg:h-16"
+              src="bostani-logo.jpg"
+              alt="logo"
+            />
             {/* <h1 className="text-3xl h-8 -mt-0.75">Fresh Market</h1> */}
           </div>
 
           {/*                                                 */}
-          <div className="flex-1 flex-col justify-center items-center bg-[#56bf41]">
-            <div className="lg:flex gap-8">
+          <div className="h-full flex flex-1 flex-col justify-center items-center bg-[#56bf41]">
+            <div className="flex gap-8 justify-center">
               <img
-                className="hidden lg:flex w-30 h-30"
+                className="hidden lg:flex w-25 h-25"
                 src="dairy.png"
                 alt="dairy-icon"
               />
               <div className="lg:flex flex-col items-center justify-center lg:gap-2">
-                <h1 className="text-[16px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-5xl">
+                <h1 className="text-[14px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-4xl">
                   <span className="text-yellow-300">წალკის</span> რძის
                   პროდუქტები
                 </h1>
                 <div className="flex items-center gap-2">
                   <img className="lg:hidden w-8 h-8" src="dairy.png" alt="" />
-                  <h1 className="text-[16px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-5xl">
+                  <h1 className="text-[14px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-4xl">
                     ხილ-ბოსტნეული
                   </h1>
                   <img
@@ -44,7 +48,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               <img
-                className="hidden lg:flex w-30 h-30"
+                className="hidden lg:flex w-25 h-25"
                 src="vegetables.png"
                 alt=""
               />
@@ -52,9 +56,13 @@ const Header: React.FC = () => {
           </div>
           {/*                                                 */}
 
-          <div className="flex gap-2 px-2">
+          <div className="flex gap-2 px-2 lg:gap-6 lg:p-8">
             <button className="cursor-pointer">
-              <img className="w-6 h-6" src="cart.svg" alt="cart icon" />
+              <img
+                className="w-5 h-5 lg:w-7 lg:h-7"
+                src="cart.svg"
+                alt="cart icon"
+              />
             </button>
 
             <button
@@ -62,7 +70,7 @@ const Header: React.FC = () => {
               className="cursor-pointer"
             >
               <img
-                className="w-6 h-6"
+                className="w-5 h-5 lg:w-7 lg:h-7"
                 src="person-header.svg"
                 alt="human icon"
               />
@@ -72,7 +80,11 @@ const Header: React.FC = () => {
               onClick={() => setToggleMenu(true)}
               className="cursor-pointer"
             >
-              <img className="w-6 h-6" src="menu.svg" alt="menu icon" />
+              <img
+                className="w-5 h-5 lg:w-7 lg:h-7"
+                src="menu.svg"
+                alt="menu icon"
+              />
             </button>
           </div>
         </div>
