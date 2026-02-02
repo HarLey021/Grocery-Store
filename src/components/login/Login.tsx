@@ -35,20 +35,20 @@ const Login: React.FC = () => {
 
             <div className="flex justify-between mb-6">
               <div className="flex gap-2">
-                <input type="checkbox" />
+                <input className="cursor-pointer" type="checkbox" />
                 <h4 className="text-[13px] font-normal text-grey">
                   Remember me
                 </h4>
               </div>
               <button
                 onClick={() => navigate("/recover")}
-                className="text-[13px] font-normal text-green"
+                className="text-[13px] font-normal text-green cursor-pointer"
               >
                 Forgot password?
               </button>
             </div>
 
-            <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6">
+            <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6 cursor-pointer">
               Sign in
             </button>
 
@@ -56,7 +56,7 @@ const Login: React.FC = () => {
               Don't have an account?{" "}
               <button
                 onClick={() => navigate("/registration")}
-                className="text-green"
+                className="text-green cursor-pointer"
               >
                 Sign up
               </button>

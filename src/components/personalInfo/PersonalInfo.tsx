@@ -70,11 +70,11 @@ const PersonalInfo: React.FC = () => {
           </div>
 
           <div className="w-full flex justify-between">
-            <button className="w-30 h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6">
+            <button className="w-30 h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6 cursor-pointer">
               Save
             </button>
 
-            <button className="w-30 h-12 bg-red rounded-lg text-white text-[15px] font-normal mb-6">
+            <button className="w-30 h-12 bg-red rounded-lg text-white text-[15px] font-normal mb-6 cursor-pointer">
               Discard
             </button>
           </div>

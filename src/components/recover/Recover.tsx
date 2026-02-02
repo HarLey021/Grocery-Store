@@ -27,13 +27,13 @@ const Recover: React.FC = () => {
             />
           </div>
 
-          <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6">
+          <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6 cursor-pointer">
             Send recover link
           </button>
 
           <button
             onClick={() => navigate("/login")}
-            className="text-[13px] font-normal text-green"
+            className="text-[13px] font-normal text-green cursor-pointer"
           >
             Back to log in
           </button>

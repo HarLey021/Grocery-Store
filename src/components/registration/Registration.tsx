@@ -66,13 +66,16 @@ const Registration: React.FC = () => {
               />
             </div>
 
-            <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6">
+            <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6 cursor-pointer">
               Create Account
             </button>
 
             <h4 className="text-[#4B5563] text-[13px] font-normal text-center">
               Already have an account?{" "}
-              <button onClick={() => navigate("/login")} className="text-green">
+              <button
+                onClick={() => navigate("/login")}
+                className="text-green cursor-pointer"
+              >
                 Sign in
               </button>
             </h4>

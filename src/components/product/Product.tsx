@@ -13,7 +13,7 @@ const Product: React.FC = () => {
 
           <div className="flex justify-between items-center">
             <h2 className="text-lg text-green font-normal">GEL4.50/kg</h2>
-            <button className="w-21 h-10 bg-green rounded-lg px-4 py-2 flex justify-between items-center mt-[-4]">
+            <button className="w-21 h-10 bg-green rounded-lg px-4 py-2 flex justify-between items-center mt-[-4] cursor-pointer">
               <img className="w-4 h-4" src="cart.svg" alt="cart icon" />
               <h4 className="text-[16px] text-white font-normal">Add</h4>
             </button>

@@ -14,15 +14,18 @@ const Header: React.FC = () => {
       <div>
         <div className="w-full h-14 bg-white flex justify-between items-center lg:h-27">
           <div className="w-14 h-full flex justify-center items-center gap-2 lg:w-29 ">
-            <img
-              className="w-8 h-8 lg:w-16 lg:h-16"
-              src="bostani-logo.jpg"
-              alt="logo"
-            />
-            {/* <h1 className="text-3xl h-8 -mt-0.75">Fresh Market</h1> */}
+            <button
+              className="cursor-pointer"
+              onClick={() => navigate("/Home")}
+            >
+              <img
+                className="w-8 h-8 lg:w-16 lg:h-16"
+                src="bostani-logo.jpg"
+                alt="logo"
+              />
+            </button>
           </div>
 
-          {/*                                                 */}
           <div className="h-full flex flex-1 flex-col justify-center items-center bg-[#56bf41]">
             <div className="flex gap-8 justify-center">
               <img
@@ -54,7 +57,6 @@ const Header: React.FC = () => {
               />
             </div>
           </div>
-          {/*                                                 */}
 
           <div className="flex gap-2 px-2 lg:gap-6 lg:p-8">
             <button className="cursor-pointer">
@@ -89,32 +91,6 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* <div className="w-full flex flex-col justify-center items-center bg-[#56bf41] px-2 py-2 [box-shadow:0_4px_10px_rgba(0,0,0,0.3)]">
-          <div className="lg:flex gap-8">
-            <img className="hidden lg:flex w-30 h-30" src="dairy.png" alt="" />
-            <div className="lg:flex flex-col items-center justify-center lg:gap-2">
-              <h1 className="text-[22px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-5xl">
-                <span className="text-yellow-300">წალკის</span> რძის პროდუქტები
-              </h1>
-              <div className="flex items-center gap-2">
-                <img className="lg:hidden w-15 h-15" src="dairy.png" alt="" />
-                <h1 className="text-[22px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-5xl">
-                  ხილ-ბოსტნეული
-                </h1>
-                <img
-                  className="lg:hidden w-15 h-15"
-                  src="vegetables.png"
-                  alt=""
-                />
-              </div>
-            </div>
-            <img
-              className="hidden lg:flex w-30 h-30"
-              src="vegetables.png"
-              alt=""
-            />
-          </div>
-        </div> */}
         {toggleMenu ? <Menu /> : ""}
       </div>
     </>
