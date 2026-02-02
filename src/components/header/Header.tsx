@@ -39,8 +39,12 @@ const Header: React.FC = () => {
                   პროდუქტები
                 </h1>
                 <div className="flex items-center gap-2">
-                  <img className="lg:hidden w-8 h-8" src="dairy.png" alt="" />
-                  <h1 className="text-[14px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-4xl">
+                  <img
+                    className="lg:hidden w-8 h-8"
+                    src="dairy.png"
+                    alt="dairy-icon"
+                  />
+                  <h1 className="text-[13px] text-center text-white font-black   [text-shadow:-1px_1px_0_#000,-2px_1px_0_#000,-3px_1px_0_#000,-4px_1px_0_#000] lg:text-4xl">
                     ხილ-ბოსტნეული
                   </h1>
                   <img
