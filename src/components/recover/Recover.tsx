@@ -12,14 +12,14 @@ const Recover: React.FC = () => {
           </div>
 
           <h1 className="w-auto text-3xl font-normal text-center mb-2">
-            Recover Password
+            პაროლის აღდგენა
           </h1>
           <h3 className="text-[13px] font-normal text-light-grey mb-8 text-center">
-            Enter your email to receive reset instructions
+            ინსტრუქციების მისაღებად გთხოვთ შეიყვანოთ თქვენი ელფოსტა
           </h3>
 
           <div className="w-full h-19.5 mb-6">
-            <h4 className="text-[14px] font-normal text-grey mb-2">Email</h4>
+            <h4 className="text-[14px] font-normal text-grey mb-2">ელფოსტა</h4>
             <input
               className="w-full h-12 border border-[#D1D5DB] text-black text-[16px] rounded-lg px-4 py-3 placeholder:opacity-50"
               type="email"
@@ -28,14 +28,14 @@ const Recover: React.FC = () => {
           </div>
 
           <button className="w-full h-12 bg-green rounded-lg text-white text-[15px] font-normal mb-6 cursor-pointer  hover:[box-shadow:0_0_15px_rgba(22,163,74,0.3)]">
-            Send recover link
+            ლინკის გაგზავნა
           </button>
 
           <button
             onClick={() => navigate("/login")}
             className="text-[13px] font-normal text-green cursor-pointer hover:text-[#22c55e]"
           >
-            Back to log in
+            შესვლაზე დაბრუნება
           </button>
         </div>
       </div>

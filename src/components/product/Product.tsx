@@ -9,15 +9,15 @@ const Product: React.FC = () => {
         />
 
         <div>
-          <h1 className="text-xl text-dark font-normal mb-3">Apples</h1>
+          <h1 className="text-xl text-dark font-normal mb-3">ვაშლი</h1>
 
           <div className="flex justify-between items-center">
             <h2 className="text-lg text-green font-normal">
-              <span className="text-black">GEL </span>4.50/kg
+              <span className="text-black">GEL </span>4.50<span>/კგ</span>
             </h2>
-            <button className="w-21 h-10 text-white text-[16px] font-nromal bg-green rounded-lg px-4 py-2 flex justify-between items-center mt-[-4] cursor-pointer hover:[box-shadow:0_0_15px_rgba(22,163,74,0.3)]">
+            <button className="w-30 h-10 text-white text-[13px] font-nromal bg-green rounded-lg px-4 py-2 flex justify-between items-center cursor-pointer hover:[box-shadow:0_0_15px_rgba(22,163,74,0.3)]">
               <svg
-                className="w-4 h-4"
+                className="w-4 h-4 -mt-1"
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
@@ -53,7 +53,7 @@ const Product: React.FC = () => {
                   </clipPath>
                 </defs>
               </svg>
-              Add
+              დამატება
             </button>
           </div>
         </div>

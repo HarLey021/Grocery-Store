@@ -7,6 +7,7 @@ const Filter: React.FC = () => {
     useContext<MainContextType>(MainContext);
 
   const categories = [
+    "ყველა პროდუქტი",
     "ხილი",
     "ბოსტნეული",
     "რძის ნაწარმი",
@@ -21,7 +22,7 @@ const Filter: React.FC = () => {
             <input
               className="w-full  h-12 border border-[#D1D5DB] text-black text-[16px] rounded-lg px-4 py-3 placeholder:opacity-50"
               type="text"
-              placeholder="Search"
+              placeholder="ძებნა"
             />
             <button className="cursor-pointer text-[#B2B2B2] hover:text-green">
               <svg
@@ -47,7 +48,7 @@ const Filter: React.FC = () => {
               e.stopPropagation();
               setShowFilter(!showFilter);
             }}
-            className="w-20 h-12 lg:w-30 text-dark text-[16px] font-normal lg:h-12 flex justify-center items-center rounded-lg gap-1 border border-[#D1D5DB] cursor-pointer hover:[box-shadow:0_0_10px_rgba(0,0,0,0.1)] hover:text-green hover:stroke-green"
+            className="w-20 h-12 lg:w-30 text-dark text-[13px] font-normal lg:h-12 flex flex-col justify-center items-center rounded-lg gap-1 border border-[#D1D5DB] cursor-pointer hover:[box-shadow:0_0_10px_rgba(0,0,0,0.1)] hover:text-green hover:stroke-green"
           >
             <svg
               className="w-4 h-4 lg:w-5 lg:h-5"
@@ -72,7 +73,7 @@ const Filter: React.FC = () => {
                 </clipPath>
               </defs>
             </svg>
-            Filter
+            ფილტრი
           </button>
 
           {showFilter && (
@@ -83,7 +84,7 @@ const Filter: React.FC = () => {
               {categories.map((cat) => (
                 <button
                   key={cat}
-                  className="w-full h-12 px-6 flex justify-start items-center cursor-pointer text-[20px] text-dark font-normal hover:text-green "
+                  className="w-full h-12 px-6 flex justify-start items-center cursor-pointer text-[16px] text-dark font-normal hover:text-green "
                 >
                   {cat}
                 </button>

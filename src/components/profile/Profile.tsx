@@ -26,17 +26,17 @@ const Profile: React.FC = () => {
                 src="person-bold.svg"
                 alt="person icon"
               />
-              Personal info
+              პირადი ინფორმაცია
             </button>
 
             <button className="w-full h-12 text-[14px] text-grey font-normal flex items-center gap-3 rounded-lg px-2 hover:bg-[#F0FDF4] cursor-pointer">
               <img className="w-5 h-5" src="order.svg" alt="order icon" />
-              Order history
+              შეკვეთების ისტორია
             </button>
 
             <button className="w-full h-12 text-[14px] text-grey font-normal flex items-center gap-3 rounded-lg px-2 hover:bg-[#F0FDF4] cursor-pointer">
               <img className="w-5 h-5" src="gear.svg" alt="gear icon" />
-              Settings
+              პარამეტრები
             </button>
 
             <button
@@ -44,7 +44,7 @@ const Profile: React.FC = () => {
               className="w-full h-12 text-[14px] text-red font-normal flex items-center gap-3 rounded-lg px-2 hover:bg-[#F0FDF4] cursor-pointer"
             >
               <img className="w-5 h-5" src="logout.svg" alt="logout icon" />
-              Logout
+              გამოსვლა
             </button>
           </div>
         </div>
