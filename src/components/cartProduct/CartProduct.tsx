@@ -1,7 +1,39 @@
-// import { useState } from "react";
+import { useContext } from "react";
+import type {
+  CartProductProps,
+  MainContextType,
+  ProductType,
+} from "../../types";
+import { MainContext } from "../../contexts/MainContext";
 
-const CartProduct: React.FC = () => {
-  // const [quantity, setQuantity] = useState(0);
+const CartProduct: React.FC<CartProductProps> = ({ product }) => {
+  const { setCartContent } = useContext<MainContextType>(MainContext);
+
+  const increase = () => {
+    setCartContent((prev) =>
+      prev.map((p) =>
+        p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p,
+      ),
+    );
+  };
+
+  const decrease = () => {
+    setCartContent((prev) =>
+      prev.map((p) => {
+        if (p.id === product.id) {
+          if (p.quantity > 1) {
+            return { ...p, quantity: p.quantity - 1 };
+          }
+        }
+        return p;
+      }),
+    );
+  };
+
+  const deleteFromCart = (prod: ProductType) => {
+    setCartContent((prev) => prev.filter((p) => p.id !== prod.id));
+  };
+
   return (
     <>
       <div className="w-full h-30 p-3 flex items-center cursor-pointer hover:bg-light-grey/2">
@@ -11,25 +43,33 @@ const CartProduct: React.FC = () => {
           alt="product image"
         />
         <div className="w-full  flex flex-col justify-between">
-          <h4 className="text-[16px] text-dark font-normal mb-3">ვაშლი</h4>
+          <h4 className="text-[16px] text-dark font-normal mb-3">
+            {product.name}
+          </h4>
 
-          <div className="w-24 h-7.5 text-light-grey text-[13px] mb-1">
-            <button className="w-6 h-full border border-light-grey/30 rounded-l-lg hover:bg-green hover:text-white cursor-pointer">
+          <div className="w-18 h-7.5 text-light-grey text-[13px] mb-1">
+            <button
+              onClick={decrease}
+              className="w-6 h-full border border-light-grey/30 rounded-l-lg hover:bg-green hover:text-white cursor-pointer"
+            >
               -
             </button>
             <button className="w-6 h-full border border-light-grey/30 hover:bg-green hover:text-white cursor-pointer">
-              1
+              {product.quantity}
             </button>
-            <button className="w-6 h-full border border-light-grey/30 rounded-r-lg hover:bg-green hover:text-white cursor-pointer">
+            <button
+              onClick={increase}
+              className="w-6 h-full border border-light-grey/30 rounded-r-lg hover:bg-green hover:text-white cursor-pointer"
+            >
               +
             </button>
           </div>
 
           <div className="text-[16px] text-grey font-normal flex items-center gap-1">
-            <h5>1</h5>
+            <h5>{product.quantity}</h5>
             <span className="">x</span>
             <div className="flex text-green">
-              <h5>4.50</h5>
+              <h5>{product.price}</h5>
               <svg
                 className="mt-0.5 -ml-0.5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +91,7 @@ const CartProduct: React.FC = () => {
           </div>
         </div>
 
-        <button>
+        <button onClick={() => deleteFromCart(product)}>
           <svg
             className="cursor-pointer hover:text-red"
             xmlns="http://www.w3.org/2000/svg"
