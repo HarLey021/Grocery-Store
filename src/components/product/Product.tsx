@@ -1,21 +1,103 @@
-const Product: React.FC = () => {
+import { useContext, useState } from "react";
+import type { MainContextType, ProductProps, ProductType } from "../../types";
+import { MainContext } from "../../contexts/MainContext";
+
+const Product: React.FC<ProductProps> = ({ product }) => {
+  const { cartContent, setCartContent } =
+    useContext<MainContextType>(MainContext);
+  const [productQuantity, setProductQuantity] = useState(1);
+
+  const addInCart = (prod: ProductType) => {
+    const existing = cartContent.find((p) => p.id === prod.id);
+    if (existing) {
+      setCartContent((prev) =>
+        prev.map((p) =>
+          p.id === prod.id
+            ? { ...p, quantity: p.quantity + productQuantity }
+            : p,
+        ),
+      );
+      setProductQuantity(1);
+    } else {
+      setCartContent((prev) => [
+        ...prev,
+        { ...prod, quantity: productQuantity },
+      ]);
+      setProductQuantity(1);
+    }
+  };
+
   return (
     <>
-      <div className="w-81 h-81 bg-white rounded-lg p-6 [box-shadow:0_4px_20px_rgba(0,0,0,0.1)]">
+      <div className="flex flex-col w-81 h-85 bg-white rounded-lg p-6 [box-shadow:0_4px_20px_rgba(0,0,0,0.1)]">
         <img
           className="w-full h-48 rounded-lg mb-4"
           src="apples.jpg"
           alt="apples image"
         />
 
-        <div>
-          <h1 className="text-xl text-dark font-normal mb-3">ვაშლი</h1>
+        <div className="flex flex-col flex-1 justify-between">
+          <div className="flex justify-between items-start">
+            <h1 className="text-[16px] text-dark font-normal mb-3">
+              {product.name}
+            </h1>
+
+            <h2 className="flex items-center text-[16px] text-green font-normal">
+              <span className="flex items-center">
+                {product.price.toFixed(2)}
+                <svg
+                  className="-ml-0.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 13a6 6 0 1 0 -6 6" />
+                  <path d="M6 19h12" />
+                  <path d="M10 5v7" />
+                  <path d="M14 12v-7" />
+                </svg>
+              </span>
+              <span className="text-light-grey">
+                {`/${product.defaultAmount}${product.unit}`}
+              </span>
+            </h2>
+          </div>
 
           <div className="flex justify-between items-center">
-            <h2 className="text-lg text-green font-normal">
-              <span className="text-black">GEL </span>4.50<span>/კგ</span>
-            </h2>
-            <button className="w-30 h-10 text-white text-[13px] font-nromal bg-green rounded-lg px-4 py-2 flex justify-between items-center cursor-pointer hover:[box-shadow:0_0_15px_rgba(22,163,74,0.3)]">
+            <div className="w-24 h-7.5 text-light-grey text-[13px]">
+              <button
+                onClick={() => {
+                  productQuantity > 1
+                    ? setProductQuantity(productQuantity - 1)
+                    : setProductQuantity(productQuantity);
+                }}
+                className="w-8 h-full border border-light-grey/30 rounded-l-lg hover:bg-green hover:text-white cursor-pointer"
+              >
+                -
+              </button>
+              <button className="w-8 h-full border border-light-grey/30 hover:bg-green hover:text-white cursor-pointer">
+                {productQuantity}
+              </button>
+              <button
+                onClick={() => {
+                  setProductQuantity(productQuantity + 1);
+                }}
+                className="w-8 h-full border border-light-grey/30 rounded-r-lg hover:bg-green hover:text-white cursor-pointer"
+              >
+                +
+              </button>
+            </div>
+
+            <button
+              onClick={() => addInCart(product)}
+              className="w-30 h-10 text-white text-[13px] font-nromal bg-green rounded-lg px-4 py-2 flex justify-between items-center cursor-pointer hover:[box-shadow:0_0_15px_rgba(22,163,74,0.3)]"
+            >
               <svg
                 className="w-4 h-4 -mt-1"
                 xmlns="http://www.w3.org/2000/svg"
