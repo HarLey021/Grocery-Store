@@ -11,4 +11,29 @@ type MainContextType = {
   setShowFilter: React.Dispatch<SetStateAction<boolean>>;
   showCart: boolean;
   setShowCart: React.Dispatch<SetStateAction<boolean>>;
+  cartContent: ProductType[];
+  setCartContent: React.Dispatch<SetStateAction<CartItem[]>>;
 };
+
+interface ProductType {
+  [x: string]: ReactNode;
+  id: string;
+  name: string;
+  price: number;
+  unit: "კგ" | "გ" | "ლ" | "მლ" | "ც" | "მგ";
+  defaultAmount: number;
+}
+
+type ProductProps = {
+  key: string;
+  product: ProductType;
+};
+
+type CartProductProps = {
+  key: string;
+  product: ProductType;
+};
+
+interface CartItem extends ProductType {
+  quantity: number;
+}
