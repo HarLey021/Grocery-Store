@@ -8,4 +8,6 @@ export const MainContext = createContext<MainContextType>({
   setShowFilter: () => {},
   showCart: false,
   setShowCart: () => {},
+  cartContent: [],
+  setCartContent: () => {},
 });

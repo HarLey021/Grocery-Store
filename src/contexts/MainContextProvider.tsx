@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MainContext } from "./MainContext";
+import type { CartItem } from "../types";
 
 const MainContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -7,6 +8,7 @@ const MainContextProvider: React.FC<{ children: React.ReactNode }> = ({
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [cartContent, setCartContent] = useState<CartItem[]>([]);
 
   useEffect(() => {
     if (toggleMenu) {
@@ -29,6 +31,10 @@ const MainContextProvider: React.FC<{ children: React.ReactNode }> = ({
         setShowFilter,
         showCart,
         setShowCart,
+        // productQuantity,
+        // setProductQuantity,
+        cartContent,
+        setCartContent,
       }}
     >
       {children}
