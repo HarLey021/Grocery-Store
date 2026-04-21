@@ -9,7 +9,7 @@ export const orders: OrderType[] = [
       { name: "სრულცხიმოვანი რძე 1ლ", qty: 3, price: 1.49 },
     ],
     total: 10.45,
-    time: "2025-03-09T08:14:00",
+    date: "2025-03-09T08:14:00",
     status: "მიტანილი",
   },
   {
@@ -22,7 +22,7 @@ export const orders: OrderType[] = [
       { name: "მოძვლებული ქათმის მკერდი", qty: 2, price: 6.49 },
     ],
     total: 17.48,
-    time: "2025-03-09T09:02:00",
+    date: "2025-03-09T09:02:00",
     status: "მიტანის პროცესშია",
   },
   {
@@ -35,8 +35,8 @@ export const orders: OrderType[] = [
       { name: "ბერძნული იოგურტი", qty: 2, price: 2.49 },
     ],
     total: 8.94,
-    time: "2025-03-09T09:45:00",
-    status: "მზადების პროცესშია",
+    date: "2025-03-09T09:45:00",
+    status: "მზადდება",
   },
   {
     id: "ORD-004",
@@ -48,7 +48,7 @@ export const orders: OrderType[] = [
       { name: "ფორთოხლის წვენი", qty: 2, price: 2.99 },
     ],
     total: 10.45,
-    time: "2025-03-09T10:11:00",
+    date: "2025-03-09T10:11:00",
     status: "მიღებული",
   },
   {
@@ -61,7 +61,7 @@ export const orders: OrderType[] = [
       { name: "ჩაშლილი პური", qty: 2, price: 4.5 },
     ],
     total: 11.99,
-    time: "2025-03-09T10:33:00",
+    date: "2025-03-09T10:33:00",
     status: "ახალი",
   },
   {
@@ -71,7 +71,7 @@ export const orders: OrderType[] = [
     address: "ბროკვეი, კედრის ბულვ. 55",
     products: [{ name: "მოძვლებული ქათმის მკერდი", qty: 1, price: 6.49 }],
     total: 6.49,
-    time: "2025-03-09T11:05:00",
+    date: "2025-03-09T11:05:00",
     status: "გაუქმებული",
   },
   {
@@ -84,7 +84,7 @@ export const orders: OrderType[] = [
       { name: "სრულცხიმოვანი რძე 1ლ", qty: 2, price: 1.49 },
     ],
     total: 10.45,
-    time: "2025-03-09T11:22:00",
+    date: "2025-03-09T11:22:00",
     status: "ახალი",
   },
 ];
