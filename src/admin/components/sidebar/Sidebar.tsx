@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { navItems } from "../../data/navItems";
 
 const Sidebar: React.FC = () => {
-  const navigate = useNavigate();
   return (
     <>
       <aside className="hidden lg:flex w-56 shrink-0 bg-white flex-col transition-all duration-300 min-h-screen  relative">
@@ -30,9 +29,13 @@ const Sidebar: React.FC = () => {
         <nav className="flex-1 py-4 space-y-1 px-2">
           {navItems.map((i) => (
             <div key={i.id} className="relative group">
-              <button
-                onClick={() => navigate(`/admin/${i.id}`)}
-                className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all cursor-pointer text-dark/50 hover:text-white hover:bg-green"
+              <NavLink
+                key={i.id}
+                to={`/admin/${i.id}`}
+                className={({ isActive }) =>
+                  `w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all cursor-pointer 
+                  ${isActive ? "text-green" : "text-dark/50 hover:text-green"}`
+                }
               >
                 <img src={i.icon} />
                 <span className="text-sm font-normal">{i.label}</span>
@@ -41,7 +44,7 @@ const Sidebar: React.FC = () => {
                     2
                   </span>
                 )}
-              </button>
+              </NavLink>
             </div>
           ))}
         </nav>
